@@ -8,6 +8,7 @@ using DevExpress.Data.Filtering;
 using DevExpress.ExpressApp;
 using DevExpress.Persistent.Base;
 using DevExpress.Xpo;
+using static System.Collections.Specialized.BitVector32;
 
 namespace NonPersistentObjectsDemo.Module.BusinessObjects {
 
@@ -52,13 +53,24 @@ namespace NonPersistentObjectsDemo.Module.BusinessObjects {
                 return _Products;
             }
         }
+    //private XPCollection<Product> products2;
 
-        private XPCollection<Product> products2;
-        public XPCollection<Product>()
-            {
-get {}
-}
-    }
+    //    public XPCollection<Product> Products2
+    //        {
+    //        get {
+    //            if(products2 == null)
+    //            {
+
+    //                var os = (NonPersistentObjectSpace)ObjectSpace;
+    //                var session = os.Ses
+
+    //               // products2 = ObjectSpace.CreateCollection(typeof(Product));
+    //            }
+    //            return products2;
+    //        }
+    //    }
+
+
 
     class ProductViewAdapter {
         private NonPersistentObjectSpace objectSpace;
